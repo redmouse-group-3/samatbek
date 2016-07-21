@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from package01 import if_module02
+from samatbek.hw04_task01.pack_task02 import if_module02
 
 print('Общество в начале XXI века')
 age = int(raw_input("Сколько вам лет? "))
