@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import if_module02
+from package01 import if_module02
 
 print('Общество в начале XXI века')
 age = int(raw_input("Сколько вам лет? "))
