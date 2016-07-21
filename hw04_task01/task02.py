@@ -1,18 +1,22 @@
 # -*- coding: utf-8 -*-
-from samatbek.hw04_task01.pack_task02 import if_module02
+import sys
+
+sys.path.append('home/python/samatbek/hw04_task01')
+
+import pack_task02
 
 print('Общество в начале XXI века')
 age = int(raw_input("Сколько вам лет? "))
 
-if 0 < age < 7:
-    print if_module02.func_0_to_7()
-elif 7 <= age < 18:
-    print if_module02.func_7_to_18()
-elif 18 <= age < 25:
-    print if_module02.func_18_to_25()
-elif 25 <= age < 60:
-    print if_module02.func_25_to_60()
-elif 60 <= age < 120:
-    print if_module02.func_60_to_120()
+if 120 > age >= 60:
+    print pack_task02.func_60_to_120()
+elif age >= 25:
+    print pack_task02.func_25_to_60()
+elif age >= 18:
+    print pack_task02.func_18_to_25()
+elif age >= 7:
+    print pack_task02.func_7_to_18()
+elif age > 0:
+    print pack_task02.func_0_to_7()
 else:
-    print if_module02.func_error()
+    print pack_task02.func_error()
