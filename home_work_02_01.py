@@ -1,11 +1,10 @@
-word = "Hello! My name is Samatbek. What is yours?"
+text = "apple samsung xiaomi lg meizu"
 
-word = word.split(' ')
-maxWord = 0
+word = text.split(' ')
+maxWord = word[0]
 
-i = 0
-while i < len(word):
-    if int(len(word[maxWord])) < int(len(word[i])):
-        maxWord = i
-    i += 1
-print "'%s' is the longest word" % word[maxWord]
+for x in word:
+    if len(maxWord) < len(x):
+        maxWord = x
+
+print "'%s' is the longest word" % maxWord
