@@ -12,7 +12,7 @@ def func_18_to_25():
 
 
 def func_25_to_60():
-    print('Вам на пенсию')
+    print('Вам на работу')
 
 
 def func_60_to_120():
