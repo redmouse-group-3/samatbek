@@ -1,10 +1,10 @@
-text = "apple samsung xiaomi lg meizu"
+text = "Apple Samsung Xiaomi LG Meizu"
 
-word = text.split(' ')
-maxWord = word[0]
+words = text.split(' ')
+max_word = words[0]
 
-for x in word:
-    if len(maxWord) < len(x):
-        maxWord = x
+for x in words:
+    if len(max_word) < len(x):
+        max_word = x
 
-print "'%s' is the longest word" % maxWord
+print "'%s' is the longest word" % max_word

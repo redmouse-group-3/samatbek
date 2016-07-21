@@ -1,12 +1,11 @@
-word = "Hi!; How do you do?; I wanted to talk with you;"
+text = "Java; C; PHP; Python; HTML; CSS"
 sep = raw_input("Please, enter separator: ")
 
-word = word.split(sep)
-minWord = 0
+words = text.split(sep)
+min_word = words[0]
 
-i = 0
-while i < len(word):
-    if int(len(word[minWord])) > int(len(word[i])):
-        minWord = i
-    i += 1
-print "'%s' is the longest word" % word[minWord]
+for x in words:
+    if min_word > x:
+        min_word = x
+
+print "'%s' is the shortest word" % min_word

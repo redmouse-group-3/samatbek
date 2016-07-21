@@ -1,11 +1,10 @@
-word = "Hi!; How do you do?; I wanted to talk with you;"
+text = "Java;C;PHP;Python;HTML;CSS"
 
-word = word.split(';')
-maxWord = 0
+words = text.split(';')
+max_word = words[0]
 
-i = 0
-while i < len(word):
-    if int(len(word[maxWord])) < int(len(word[i])):
-        maxWord = i
-    i += 1
-print "'%s' is the longest word" % word[maxWord]
+for x in words:
+    if max_word < x:
+        max_word = x
+
+print "'%s' is the longest word" % max_word
