@@ -39,6 +39,3 @@ else:
     exit(0)
 
 print('text after:  %s' % text)
-
-
-
