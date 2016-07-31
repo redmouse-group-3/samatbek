@@ -1,33 +1,33 @@
 # -*- coding: utf-8 -*-
-def func_1_to_3():
-    string = raw_input("Введите строку: ")
-    number = int(raw_input("Введите число повторов строки: "))
-    print ((string + "\n") * number)
+class IfNum:
+    x = 0
 
+    def __init__(self, x):
+        self.x = x
+        if 9 >= self.x >= 7:
+            print self.func_7_to_9()
+        elif self.x >= 4:
+            print self.func_4_to_6()
+        elif self.x >= 1:
+            print self.func_1_to_3()
+        else:
+            print self.func_error()
 
-def func_4_to_6():
-    power = int(raw_input("В какую степеть восвести ваше число? "))
-    print x ** power
+    def func_1_to_3(self):
+        string = raw_input("Введите строку: ")
+        number = int(raw_input("Введите число повторов строки: "))
+        return (string + "\n") * number
 
+    def func_4_to_6(self):
+        power = int(raw_input("В какую степеть восвести ваше число? "))
+        return self.x ** power
 
-def func_7_to_9():
-    output_numbers = [i for i in range(x + 1, x + 11)]
-    for i in output_numbers:
-        print i
+    def func_7_to_9(self):
+        return [i for i in range(self.x + 1, self.x + 11)]
 
+    def func_error(self):
+        return 'Ошибка ввода'
 
-def func_error():
-    print('Ошибка ввода')
 
 x = int(raw_input("Введите число от 1 до 9: "))
-
-if 1 <= x <= 3:
-    func_1_to_3()
-elif 4 <= x <= 6:
-    func_4_to_6()
-elif 7 <= x <= 9:
-    func_7_to_9()
-else:
-    func_error()
-
-
+num1 = IfNum(x)
