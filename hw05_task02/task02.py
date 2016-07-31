@@ -1,39 +1,47 @@
 # -*- coding: utf-8 -*-
-def func_0_to_7():
-    print('Вам в детский сад')
+class Age:
+    age = 1
 
+    def __init__(self, age):
+        self.age = age
+        if 60 <= self.age < 120:
+            print self.func_60_to_120()
+        elif 25 <= self.age:
+            print self.func_25_to_60()
+        elif 18 <= self.age:
+            print self.func_18_to_25()
+        elif 7 <= self.age:
+            print self.func_7_to_18()
+        if 0 < self.age:
+            print self.func_0_to_7()
+        else:
+            print self.func_error()
 
-def func_7_to_18():
-    print('Вам в школу')
+    @staticmethod
+    def func_0_to_7():
+        return 'Вам в детский сад'
 
+    @staticmethod
+    def func_7_to_18():
+        return 'Вам в школу'
 
-def func_18_to_25():
-    print('Вам в профессиональное учебное заведение')
+    @staticmethod
+    def func_18_to_25():
+        return 'Вам в профессиональное учебное заведение'
 
+    @staticmethod
+    def func_25_to_60():
+        return 'Вам на работу'
 
-def func_25_to_60():
-    print('Вам на работу')
+    @staticmethod
+    def func_60_to_120():
+        return 'Вам предоставляется выбор'
 
-
-def func_60_to_120():
-    print('Вам предоставляется выбор')
-
-
-def func_error():
-    print('Вы ввели неправильные данные')
+    @staticmethod
+    def func_error():
+        return 'Вы ввели неправильные данные'
 
 print('Общество в начале XXI века')
 age = int(raw_input("Сколько вам лет? "))
 
-if 0 < age < 7:
-    func_0_to_7()
-elif 7 <= age < 18:
-    func_7_to_18()
-elif 18 <= age < 25:
-    func_18_to_25()
-elif 25 <= age < 60:
-    func_25_to_60()
-elif 60 <= age < 120:
-    func_60_to_120()
-else:
-    func_error()
+object1 = Age(age)
